@@ -1,2 +1,2 @@
 # generator
-Password Generator
+Generate your new password according to your settings!
