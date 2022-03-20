@@ -1,0 +1,466 @@
+html {
+	font-size: 10px;
+	scroll-behavior: smooth;
+	body {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		background-color: #dbf227;
+		font-family: 'Poppins', sans-serif;
+		::selection {
+			background-color: white;
+			color: black;
+		}
+	}
+}
+
+.wrapper {
+	display: grid;
+	align-items: center;
+	justify-content: center;
+}
+
+.generatedPass {
+	background-color: transparent;
+	height: 100px;
+	width: 85%;
+	border: 3px solid black;
+	font-size: 1.5rem;
+	line-height: 100px;
+	color: black;
+	text-align: center;
+	margin: 10% auto 0;
+}
+
+.generatedPass:focus {
+	outline: none;
+}
+
+.range {
+	width: 85%;
+	margin: 15px auto 0;
+}
+
+.range {
+	-webkit-appearance: none;
+	height: 15px;
+	border-radius: 5px;
+	background: white;
+	outline: none;
+	-webkit-transition: 0.2s;
+	transition: opacity 0.2s;
+}
+
+.range::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 25px;
+	height: 25px;
+	background: black;
+	cursor: pointer;
+	border-radius: 50%;
+}
+
+.range::-moz-range-thumb {
+	width: 25px;
+	height: 25px;
+	background: black;
+	cursor: pointer;
+	// border-radius: 50%;
+	border: 0px solid black;
+}
+
+.generate {
+	display: block;
+	height: 75px;
+	width: 276px;
+	border: 3px solid black;
+	background-color: transparent;
+	margin: 55px auto 0;
+	font-size: 2.5rem;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	color: black;
+}
+
+.generate:hover {
+	background-color: black;
+	color: white;
+	cursor: pointer;
+}
+
+.copyBtn {
+	display: block;
+	border: 3px solid black;
+	background-color: transparent;
+	margin: 0px auto 0;
+	font-size: 2.5rem;
+	margin-bottom: 50px;
+	height: 75px;
+	width: 276px;
+	text-transform: uppercase;
+	color: black;
+}
+
+.copyBtn:hover {
+	background-color: black;
+	color: white;
+	cursor: pointer;
+}
+
+.passPower {
+	font-size: 2.5rem;
+	margin: 50px auto 0;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+
+.textContainer {
+	width: 85%;
+	margin: 0 auto;
+	background-color: white;
+	border: 2px solid black;
+}
+
+.aboutPass {
+	font-size: 2rem;
+	text-align: center;
+	padding: 5%;
+}
+
+.aboutPass::selection {
+	background-color: #dbf227;
+}
+
+.link {
+	text-decoration: underline;
+	color: black;
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin: 10px auto 0;
+	text-transform: uppercase;
+}
+
+.link:hover {
+	color: gray;
+}
+
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
+
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+	transform: scale(1);
+}
+
+.slider:before {
+	position: absolute;
+	content: '';
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+.switch input:checked + .slider {
+	background-color: black;
+}
+
+.switch input:focus + .slider {
+	box-shadow: 0 0 1px black;
+}
+
+.switch input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider {
+	border-radius: 34px;
+}
+
+.slider:before {
+	border-radius: 50%;
+}
+
+.switchName {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%);
+	margin-top: 20px;
+	z-index: 1;
+	text-transform: uppercase;
+}
+
+.checkboxesWrapper {
+	display: flex;
+	margin: 30px auto 0;
+	label {
+		margin: 0 7px;
+		text-align: center;
+	}
+}
+
+@media (min-width: 1025px) {
+	html {
+		font-size: 10px;
+		scroll-behavior: smooth;
+		body {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			background-color: #dbf227;
+			font-family: 'Poppins', sans-serif;
+			::selection {
+				background-color: white;
+				color: black;
+			}
+		}
+	}
+
+	.wrapper {
+		display: grid;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.generatedPass {
+		background-color: transparent;
+		height: 100px;
+		width: 800px;
+		border: 3px solid black;
+		font-size: 50px;
+		line-height: 100px;
+		color: black;
+		text-align: center;
+		margin: 150px auto 0;
+	}
+
+	.generatedPass:focus {
+		outline: none;
+	}
+
+	.range {
+		width: 33%;
+		margin: 15px auto 0;
+	}
+
+	.range {
+		-webkit-appearance: none;
+		height: 15px;
+		border-radius: 5px;
+		background: white;
+		outline: none;
+		-webkit-transition: 0.2s;
+		transition: opacity 0.2s;
+	}
+
+	.range::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		appearance: none;
+		width: 25px;
+		height: 25px;
+		background: black;
+		cursor: pointer;
+		border-radius: 50%;
+	}
+
+	.range::-moz-range-thumb {
+		width: 25px;
+		height: 25px;
+		background: black;
+		cursor: pointer;
+		// border-radius: 50%;
+		border: 0px solid black;
+	}
+
+	.rangeValue {
+		display: block;
+		margin: 0 auto;
+		position: absolute;
+		font-size: 25px;
+		top: 30%;
+		left: 80%;
+		border: 3px solid black;
+		height: 50px;
+		width: 50px;
+		line-height: 50px;
+		text-align: center;
+	}
+
+	.generate {
+		display: block;
+		height: 77px;
+		width: 276px;
+		border: 3px solid black;
+		background-color: transparent;
+		margin: 80px auto 0;
+		font-size: 2.5rem;
+		margin-bottom: 10px;
+		text-transform: uppercase;
+	}
+
+	.generate:hover {
+		background-color: black;
+		color: white;
+		cursor: pointer;
+	}
+
+	.copyBtn {
+		display: block;
+		border: 3px solid black;
+		background-color: transparent;
+		margin: 0px auto 0;
+		font-size: 2.5rem;
+		margin-bottom: 50px;
+		height: 77px;
+		width: 276px;
+		text-transform: uppercase;
+	}
+
+	.copyBtn:hover {
+		background-color: black;
+		color: white;
+		cursor: pointer;
+	}
+
+	.passPower {
+		font-size: 2.5rem;
+		margin: 50px auto 0;
+		font-weight: bold;
+		text-transform: capitalize;
+	}
+
+	.textContainer {
+		width: 50%;
+		margin: 0 auto;
+		background-color: white;
+		border: 2px solid black;
+	}
+
+	.aboutPass {
+		font-size: 2rem;
+		text-align: center;
+		padding: 5%;
+	}
+
+	.aboutPass::selection {
+		background-color: #dbf227;
+	}
+
+	.link {
+		text-decoration: underline;
+		color: black;
+		font-size: 1.5rem;
+		font-weight: bold;
+		margin: 100px auto 0;
+		text-transform: uppercase;
+	}
+
+	.link:hover {
+		color: gray;
+	}
+
+	.switch {
+		position: relative;
+		display: inline-block;
+		width: 60px;
+		height: 34px;
+	}
+
+	.switch input {
+		opacity: 0;
+		width: 0;
+		height: 0;
+	}
+
+	.slider {
+		position: absolute;
+		cursor: pointer;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: #ccc;
+		-webkit-transition: 0.4s;
+		transition: 0.4s;
+	}
+
+	.slider:before {
+		position: absolute;
+		content: '';
+		height: 26px;
+		width: 26px;
+		left: 4px;
+		bottom: 4px;
+		background-color: white;
+		-webkit-transition: 0.4s;
+		transition: 0.4s;
+	}
+
+	.switch input:checked + .slider {
+		background-color: black;
+	}
+
+	.switch input:focus + .slider {
+		box-shadow: 0 0 1px black;
+	}
+
+	.switch input:checked + .slider:before {
+		-webkit-transform: translateX(26px);
+		-ms-transform: translateX(26px);
+		transform: translateX(26px);
+	}
+
+	/* Rounded sliders */
+	.slider {
+		border-radius: 34px;
+	}
+
+	.slider:before {
+		border-radius: 50%;
+	}
+
+	.switchName {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%);
+
+		z-index: 1;
+		font-size: 1.5rem;
+		text-transform: uppercase;
+	}
+
+	.checkboxesWrapper {
+		margin: 30px auto 0;
+		label {
+			margin: 0 20px;
+			text-align: center;
+		}
+	}
+}
