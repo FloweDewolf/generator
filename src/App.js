@@ -59,45 +59,40 @@ function App() {
 	const handleChange = e => {
 		const name = e.target.name
 
-		const switchBtn = name => {
-			const names = {
-				letters: () => {
-					if (!options.lettersSize && !options.specialCharacters && !options.numbers) return
+		switch (name) {
+			case 'letters':
+				if (!options.lettersSize && !options.specialCharacters && !options.numbers) return
 
-					setOptions({
-						...options,
-						letters: !options.letters,
-					})
-				},
-				lettersSize: () => {
-					if (!options.letters && !options.specialCharacters && !options.numbers) return
+			setOptions({
+				...options,
+				letters: !options.letters,
+			})
+				break
+			case 'lettersSize':
+				if (!options.letters && !options.specialCharacters && !options.numbers) return
 
-					setOptions({
-						...options,
-						lettersSize: !options.lettersSize,
-					})
-				},
-				specialCharacters: () => {
-					if (!options.letters && !options.lettersSize && !options.numbers) return
+				setOptions({
+					...options,
+					lettersSize: !options.lettersSize,
+				})
+				break
+			case 'specialCharacters':
+				if (!options.letters && !options.lettersSize && !options.numbers) return
 
-					setOptions({
-						...options,
-						specialCharacters: !options.specialCharacters,
-					})
-				},
-				numbers: () => {
-					if (!options.letters && !options.lettersSize && !options.specialCharacters) return
-					
-					setOptions({
-						...options,
-						numbers: !options.numbers,
-					})
-				},
-			}[name]
-			return names
+				setOptions({
+					...options,
+					specialCharacters: !options.specialCharacters,
+				})
+				break
+			case 'numbers':
+				if (!options.letters && !options.lettersSize && !options.specialCharacters) return
+				setOptions({
+					...options,
+					numbers: !options.numbers,
+				})
+				break
+			default: break
 		}
-
-		(switchBtn(name)())
 	}
 
 	const handleRange = e => {
