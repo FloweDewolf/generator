@@ -67,7 +67,7 @@ function App() {
 				...options,
 				letters: !options.letters,
 			})
-			break
+				break
 			case 'lettersSize':
 				if (!options.letters && !options.specialCharacters && !options.numbers) return
 
@@ -85,6 +85,7 @@ function App() {
 				})
 				break
 			case 'numbers':
+				if (!options.letters && !options.lettersSize && !options.specialCharacters) return
 				setOptions({
 					...options,
 					numbers: !options.numbers,
