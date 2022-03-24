@@ -18,7 +18,6 @@ function App() {
 		const allBigLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 		const allSpecialCharacters = '!@#$%^&*?_-+'
 		const allNumbers = '0123456789'
-		
 
 		options.numbers && (chars += chars.concat(allNumbers))
 
@@ -27,7 +26,6 @@ function App() {
 		options.letters && (chars += chars.concat(allLetters))
 
 		options.lettersSize && (chars += chars.concat(allBigLetters))
-
 
 		let passwordLength = options.rangeValue
 		const generatedPass = document.getElementById('generatedPass')
@@ -61,71 +59,38 @@ function App() {
 	const handleChange = e => {
 		const name = e.target.name
 
-		if (name === 'letters') {
+		switch (name) {
+			case 'letters':
+				if (!options.lettersSize && !options.specialCharacters && !options.numbers) return
+
 			setOptions({
 				...options,
 				letters: !options.letters,
 			})
-			if (
-				!options.lettersSize &&
-				!options.specialCharacters &&
-				!options.numbers
-			) {
+			break
+			case 'lettersSize':
+				if (!options.letters && !options.specialCharacters && !options.numbers) return
+
 				setOptions({
 					...options,
-					letters: options.letters,
+					lettersSize: !options.lettersSize,
 				})
-				return
-			}
-		}
+				break
+			case 'specialCharacters':
+				if (!options.letters && !options.lettersSize && !options.numbers) return
 
-		if (name === 'lettersSize') {
-			setOptions({
-				...options,
-				lettersSize: !options.lettersSize,
-			})
-
-			if (!options.letters && !options.specialCharacters && !options.numbers) {
 				setOptions({
 					...options,
-					lettersSize: options.lettersSize,
+					specialCharacters: !options.specialCharacters,
 				})
-				return
-			}
-		}
-
-		if (name === 'specialCharacters') {
-			setOptions({
-				...options,
-				specialCharacters: !options.specialCharacters,
-			})
-
-			if (!options.letters && !options.lettersSize && !options.numbers) {
+				break
+			case 'numbers':
 				setOptions({
 					...options,
-					specialCharacters: options.specialCharacters,
+					numbers: !options.numbers,
 				})
-				return
-			}
-		}
-
-		if (name === 'numbers') {
-			setOptions({
-				...options,
-				numbers: !options.numbers,
-			})
-
-			if (
-				!options.letters &&
-				!options.lettersSize &&
-				!options.specialCharacters
-			) {
-				setOptions({
-					...options,
-					numbers: options.numbers,
-				})
-				return
-			}
+				break
+			default: break
 		}
 	}
 
